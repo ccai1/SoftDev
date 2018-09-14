@@ -11,7 +11,8 @@ def makeDict(file, dictionary):
     ##open csv file
     with open(file, newline='') as csvfile:
 
-        ##separate each row by comma into a string array
+        ##a reader object iterates through
+        ##and separates each row by comma into a string array
         csvfile = csv.reader(csvfile, delimiter=',')
 
         ##for each row, assign string 0 as the key, and
