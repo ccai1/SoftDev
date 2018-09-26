@@ -25,10 +25,7 @@ def makeDict(file, dictionary, colStart, colEnd):
             rowNum += 1
         dictionary.pop('Total')
 
-occupations = {} 
-makeDict('occupations.csv', occupations, 0, 1)
-
-def randOccupation():
+def randOccupation(occupations):
 
     # num is a random int from 0 - 998
     num = randint(0, 998)
