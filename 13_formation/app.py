@@ -1,7 +1,7 @@
-#Cathy Cai and  - CaiLee
-#SoftDev1 pd6
-#K11
-#2018-09-23
+#Cathy Cai
+#SoftDev1 pd06
+#K13: Echo Echo Echo
+#2018-09-27
 
 from flask import Flask, render_template, request
 app = Flask(__name__)
