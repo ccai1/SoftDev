@@ -29,9 +29,14 @@ def authenticate():
 ##    print (request.method)
 ##    print (request.args)
 ##    print (request.form)
-    name = request.form['first'] + ' ' + request.form['last'] 
-    return 'POST Request...<br>Hi ' +  name + ', do you like mangos?' + '<br><a href="/">home</a><br>'
-
+    print ('cookies...')
+    print (request.cookies)
+    return render_template('/form.html',
+                           method = 'POST',
+                           first = request.form['first'],
+                           ##first = request.cookies.get('first')
+                           last = request.form['last']
+                           )
 if __name__ == '__main__':
     app.debug = True
     app.run()
