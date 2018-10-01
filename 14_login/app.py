@@ -13,6 +13,9 @@ app.secret_key=os.urandom(32)
 @app.route("/")
 def login():
 
+    #add session
+    session["watermelon"]="juice"
+    
     #if logged in, go to welcome page
     if request.cookies.get('session'):
         return render_template ("/welcome.html",
@@ -25,9 +28,6 @@ def login():
 
 @app.route("/welcome", methods=["POST"])
 def auth():
-
-    #add session
-    session["watermelon"]="juice"
 
     #wrong username/pass
     if request.form["user"]!="watermelon":
@@ -53,7 +53,7 @@ def error(error):
 
 #logging out removes the user from the current session
 def logout():
-    session.pop('watermelon')
+    session.pop("watermelon")
     return redirect(url_for("login"))
         
 if __name__=="__main__":
