@@ -3,7 +3,6 @@
 #K14 -- Do I know You?
 #2018-10-02
 
-app=Flask(__name__)
 from flask import Flask, session, render_template, url_for, redirect, request
 import os
 
