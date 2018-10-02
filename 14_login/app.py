@@ -9,39 +9,37 @@ import os
 app=Flask(__name__)
 app.secret_key=os.urandom(32)
 
-#login info
+
 @app.route("/")
 def login():
 
-    #add session
-    session["watermelon"]="juice"
-    
-    #if logged in, go to welcome page
-    if request.cookies.get('session'):
-        return render_template ("/welcome.html",
-                               user="Watermelon"
-                               )
+    #if logged in, welcome!
+    if 'watermelon' in session:
+        return render_template("/welcome.html",
+                               user="Watermelon")
 
-    #if not, go to login page
-    else:
-        return render_template("/login.html")
+    #if not, log in!
+    return render_template("/login.html")
+
 
 @app.route("/welcome", methods=["POST"])
 def auth():
 
+    #add session
+    session["watermelon"] = "juice"
+    
     #wrong username/pass
     if request.form["user"]!="watermelon":
-        return error('username or password')
+        return error('username or password')  
     if request.form["pass"]!=session["watermelon"]:
         return error('password')
-
+    
     #right username and pass, go to welcome page!
     if request.form["pass"]==session["watermelon"]:
         return render_template("/welcome.html",
                                user="Watermelon"
                                )
 
-@app.route("/error")
 
 #wrong credentials, try again!
 def error(error):
@@ -49,13 +47,14 @@ def error(error):
                            error=error
                            )
 
-@app.route("/logout")
 
+@app.route("/logout")
 #logging out removes the user from the current session
 def logout():
     session.pop("watermelon")
     return redirect(url_for("login"))
-        
+
+
 if __name__=="__main__":
     app.debug=True
     app.run()
