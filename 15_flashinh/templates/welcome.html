@@ -1,0 +1,33 @@
+<!-- Cathy Cai and Emily Lee - CaiLee Cosmetics
+SoftDev1 pd6
+K15 -- Oh yes, perhaps I do… 
+2018-10-02 -->
+
+<!DOCTYPE html>
+<html>
+
+<!-- inheritance -->
+{% extends "login.html" %}
+
+  <!-- override title block -->
+  <title>
+    {% block title %}
+    Welcome!
+    {% endblock %}
+  </title>
+
+  <!-- override head block -->
+  <head>
+    {% block head %}
+    Welcome
+    {% endblock %}
+  </head>
+
+  <!-- override body block -->
+  <body>
+    {% block content %}
+    {{user}}!<br>
+    <br><a href="/logout">Log out</a><br>
+    {% endblock %}<br>
+  </body>
+</html>
