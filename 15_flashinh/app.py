@@ -34,6 +34,7 @@ def auth():
         session.pop('watermelon')
         return render_template("/login.html")
     if request.form["pass"]!=session["watermelon"]:
+        session.pop('watermelon')
         flash('Wrong password!')
         return render_template("/login.html")
     
