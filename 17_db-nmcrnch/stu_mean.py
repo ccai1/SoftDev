@@ -1,4 +1,4 @@
-# and Cathy Cai -- FunRun!
+#Isaac Jon and Cathy Cai -- Jones Beach
 #SoftDev1 pd6
 #K17 -- Average
 #2018-10-05
