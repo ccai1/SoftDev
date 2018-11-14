@@ -9,10 +9,9 @@ app=Flask(__name__)
 def home():
 
     # Python 3.6 on OSX has no certificates at all, and can't validate any SSL connections
-    context = ssl._create_unverified_context()
 
     # accessing and reading api
-    u = urllib.request.urlopen("https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&cloud_score=True&api_key=qW3bb6KgHGBkm5oDsidiolh2VvzenUI4zFpIjObw", context=context)
+    u = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=qW3bb6KgHGBkm5oDsidiolh2VvzenUI4zFpIjObW")
     info = u.read()
     print (info)
 
