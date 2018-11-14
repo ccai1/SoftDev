@@ -8,8 +8,6 @@ app=Flask(__name__)
 @app.route("/")
 def home():
 
-    # Python 3.6 on OSX has no certificates at all, and can't validate any SSL connections
-
     # accessing and reading api
     u = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?api_key=qW3bb6KgHGBkm5oDsidiolh2VvzenUI4zFpIjObW")
     info = u.read()
