@@ -1,8 +1,8 @@
-//Indigo Ink
-//Cathy Cai, Sophia Xia
+//Banana Team
+//Cathy Cai, Daniel Gelfand
 //SoftDev1 pd6
-//K28 -- Sequential Progression
-//2018-12-28
+//K29 -- Sequential Progression II: Electric Boogaloo
+//2018-12-19
 
 var fibb = function(n){
 
@@ -49,11 +49,16 @@ var randstu = function(){
     return stulist[num];
 }
 
+// defining elements by their id names
+
 var fibbut = document.getElementById("fib");
 var gcdbut = document.getElementById("gcd");
 var randbut = document.getElementById("rand");
 
+// defining functions related to that element
+
 var fibdis = function() {
+  console.log('fib')
   console.log(fibb(7));
   console.log(fibb(6));
   document.getElementById("p0").innerHTML = fibb(7);
@@ -61,6 +66,7 @@ var fibdis = function() {
 };
 
 var gcddis = function() {
+  console.log('gcd')
   console.log(gcd(5, 25));
   console.log(gcd(21, 14));
   document.getElementById("p1").innerHTML = gcd(5, 25);
@@ -68,12 +74,14 @@ var gcddis = function() {
 };
 
 var randdis = function() {
+  console.log('random student')
   console.log(randstu());
   console.log(randstu());
   document.getElementById("p2").innerHTML = randstu();
   // document.getElementById("p2").innerHTML = randstu();
 };
 
+// calling those functions when button is clicked
 
 fibbut.addEventListener('click', fibdis)
 gcdbut.addEventListener('click', gcddis)
