@@ -1,3 +1,9 @@
+// Indigo Ink
+// Cathy Cai, Sophia Xia
+// SoftDev1 pd6
+// K28 -- Sequential Progression
+// 2018-12-28
+
 var gcd = function (a,b) {
 
 
