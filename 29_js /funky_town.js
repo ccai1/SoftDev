@@ -49,7 +49,7 @@ var randstu = function(){
     return stulist[num];
 }
 
-// defining elements by their id names
+// retrieving elements by their id names
 
 var fibbut = document.getElementById("fib");
 var gcdbut = document.getElementById("gcd");
@@ -57,6 +57,7 @@ var randbut = document.getElementById("rand");
 
 // defining functions related to that element
 
+//Display fibonacci numbers in console and in the page
 var fibdis = function() {
   console.log('fib')
   console.log(fibb(7));
@@ -65,6 +66,7 @@ var fibdis = function() {
   // document.getElementById("p0").innerHTML = fibb(6);
 };
 
+//Display gcd in console and in the page
 var gcddis = function() {
   console.log('gcd')
   console.log(gcd(5, 25));
@@ -73,6 +75,7 @@ var gcddis = function() {
   // document.getElementById("p1").innerHTML = gcd(21, 14);
 };
 
+//Display random student in console and in the page
 var randdis = function() {
   console.log('random student')
   console.log(randstu());
