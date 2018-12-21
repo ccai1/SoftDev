@@ -62,7 +62,7 @@ var fibdis = function() {
   console.log('fib')
   console.log(fibb(7));
   console.log(fibb(6));
-  document.getElementById("p0").innerHTML = fibb(7);
+  document.getElementById("p0").innerHTML = fibb(7).toString() + ' ' + fibb(8).toString();
   // document.getElementById("p0").innerHTML = fibb(6);
 };
 
